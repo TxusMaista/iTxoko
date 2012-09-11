@@ -1,0 +1,183 @@
+.lista{
+  color:black;
+  width:100%;
+  padding: 4px 0px;
+  min-height:75px;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #fff;
+}
+
+.titulo_resumen{
+  font: 80% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  font-weight:bold;
+  height:19px;
+  overflow: hidden;
+}
+
+.title{
+  font-weight:bold;
+  height:19px;
+  overflow: hidden;
+}
+
+.imagen_resumen{
+  float: left;
+  width: 60px;
+  border-radius:10px;
+  padding: 6px;
+}
+
+.imagen_noticia{
+  float: left;
+  width: 20%;
+  margin: 1% 2%;
+  border-radius: 10px;
+  padding: 2px;
+  border: 2px solid #000000;
+}
+
+.fecha_resumen{
+  font: 70% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  margin: 0px 10px 0px 0px;
+  float: right;
+}
+
+.fecha_noticia{
+  color:white;
+  font: 85% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  float: right;
+  margin: 1px 6px 0px 0px;
+}
+
+.noticia_resumen{
+  overflow: hidden;
+  height: 36px;
+  margin: 2px;
+  padding: 0px;
+  font: 65% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  text-align: justify;
+}
+
+.noticia_noticia{
+  text-align:justify;
+  margin: 1%;
+  padding: 0;
+}
+
+.autor_resumen{
+  margin: 0px 15px 0px 0px;
+  font: 70% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  float: right;
+  font-style: italic;
+}
+
+.autor_noticia{
+  margin: 0px 15px 0px 0px;
+  font: 80% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  float: right;
+  font-style: italic;
+}
+
+.volver {
+  width:13px;
+  margin: 1px 0px 0px 10px;
+  float: left;
+}
+
+.widget header{
+  color: white;
+  background-color: #005c5e;
+  border-radius:10px;
+  margin: 0px 0px 7px 0px;
+}
+
+.widget_img{
+  float: right;
+  width:19px;
+  margin: 1px 6px 0px 0px;
+}
+
+.widget_img:hover{
+  border: 1px solid #005c5e;
+  border-radius:2px;
+}
+
+#listadoCursos{
+  display: none;
+}
+.listado{
+  margin-top: 10px;
+}
+
+#tablaHoras{
+  display: none;
+}
+
+.agenda table {
+  color:black;
+}
+
+.type_text {
+  background: #2d353e url(../img/body.png) repeat 0 0;
+  color:white;
+}
+
+.formulario {
+  font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  color:black;
+  text-align: left;
+}
+
+.login {
+  margin: 50px 0px;
+  padding: 10px 20px 0px 20px;
+  max-width:220px;
+  border-radius:10px;
+  text-align:center;
+  width:70%;
+  background-color: white;
+  box-shadow:5px 5px 5px #222;
+}
+
+.widget {
+  padding: 5px 5px 0px 5px;
+  max-width:320px;
+  border-radius:10px;
+  text-align:center;
+  width:90%;
+  background-color: white;
+  box-shadow:5px 5px 5px #222;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -o-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.sc {
+  overflow: scroll;
+  height: 342px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.noticia {
+  color:black;
+  margin: 30px 0px 0px 0px;
+  padding: 5px;
+  max-width:750px;
+  border-radius:10px;
+  text-align:center;
+  width:90%;
+  background-color: white;
+  box-shadow:5px 5px 5px #222;
+}
+
+.agenda{
+  overflow: hidden;
+  max-width:320px;
+  border-radius:10px;
+  text-align:center;
+  width:90%;
+  background-color: white;
+  box-shadow:5px 5px 5px #222;
+}

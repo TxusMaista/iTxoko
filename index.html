@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Ikasleen Txokoa</title>
+    <meta name="description" content="">
+    <meta name="author" content="Gukere">
+    <!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- For iPhone 4 with high-resolution Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/icon@2x.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/images/icon.png">
+    <link rel="apple-touch-startup-image" href="assets/images/default.png">
+    <!-- Main Stylesheet -->
+    <!--<link rel="stylesheet" href="./lungo.js/lungo-1.2.css">
+        <link rel="stylesheet" href="./lungo.js/lungo.theme.default.css">-->
+    <link rel="stylesheet" href="assets/stylesheets/tabla.css">
+    <link rel="stylesheet" href="assets/stylesheets/tema.css">
+    <link rel="stylesheet" href="assets/stylesheets/lista.css">
+    <link rel="stylesheet" href="assets/stylesheets/gukere.css">
+    <!--<link rel="stylesheet" href="kanalizador.css">-->
+     <!-- responsibue -->
+    <link href="assets/stylesheets/mediaStyle.css" rel="stylesheet" type="text/css">
+
+    <script language="javascript">
+
+        document.addEventListener('touchstart', function(event) {
+        // Prevent text selection
+        //event.preventDefault();
+        }, false);
+
+        document.addEventListener('mousedown', function(event) {
+        // Prevent text selection
+        event.preventDefault();
+        }, false);
+
+    </script>
+
+</head>
+
+<body class="app" manifest="/cache.manifest">
+    <header>
+        <span><img src="assets/images/header2.png"/></span>
+    </header>
+            
+    <nav class="btn-group">
+        <a OnClick="nav(1)" class="button">Noticias</a> 
+        <a OnClick="nav(2)" class="button">Agenda</a>
+    </nav>
+
+    <script type="text/javascript">
+        function expand(a){
+            elemtens = document.getElementsByClassName('widget');
+            elemtens2 = document.getElementsByClassName('widget_img');
+            if(elemtens[a].style.maxWidth == "320px"){
+                elemtens[a].style.maxWidth = "750px";
+                elemtens2[a].src = "assets/images/nexpand_w.png";
+            }
+            else{
+                elemtens[a].style.maxWidth = "320px";
+                elemtens2[a].src = "assets/images/expand_w.png";
+            }
+        }
+
+        function noticiaMax(w,n){
+            var temp;
+            widget = document.getElementsByClassName('widget');
+            noticia = widget[w].getElementsByClassName('lista');
+            lista = widget[w].getElementsByClassName("sc");
+
+            lista[0].insertBefore(noticia[n], lista[0].firstChild);
+            widget[w].style.maxWidth = "750px";
+
+            noticia[0].style.minHeight = "342px";
+            lista[0].scrollTop = 0;
+            lista[0].style.overflow = "hidden";
+
+            var titulo = widget[w].getElementsByClassName('title');
+            var titulo2 = noticia[0].getElementsByClassName('titulo_resumen');
+            titulo[0].firstChild.nodeValue = titulo2[0].firstChild.nodeValue;
+        }
+
+        function nav(n){
+            switch(n)
+            {
+                case 1:
+                widget = document.getElementById('listadoCursos');
+                widget.style.display = "none";
+                widget = document.getElementById('tablaHoras');
+                widget.style.display = "none";
+                widget = document.getElementById('noticias');
+                widget.style.display = "inline";
+                break;
+                case 2:
+                widget = document.getElementById('noticias');
+                widget.style.display = "none";
+                widget = document.getElementById('tablaHoras');
+                widget.style.display = "none";
+                widget = document.getElementById('listadoCursos');
+                widget.style.display = "inline";
+                break;
+                case 3:
+                widget = document.getElementById('noticias');
+                widget.style.display = "none";
+                widget = document.getElementById('listadoCursos');
+                widget.style.display = "none";
+                widget = document.getElementById('tablaHoras');
+                widget.style.display = "inline";
+                break;
+                default:
+                break;
+            }
+        }
+
+    </script>
+
+    <div id="noticias">
+            <div class="widget">
+                <header>
+                    <span class="title">Twitter</span>
+                    <img class="widget_img" onClick="expand(0)" src="assets/images/expand_w.png" />
+                </header>
+                <div class="sc" id="noticias1"></div>
+            </div>
+            <div class="widget">
+                <header>
+                    <span class="title">RSS</span>
+                    <img class="widget_img" onClick="expand(1)" src="assets/images/expand_w.png" />
+                </header>
+                <div class="sc" id="noticias2"></div>
+            </div>
+            <div class="widget">
+                <header>
+                    <span class="title">Facebook</span>
+                    <img class="widget_img" onClick="expand(2)" src="assets/images/expand_w.png" />
+                </header>
+                <div class="sc" id="noticias3"></div>
+            </div>
+            <div class="widget">
+                <header>
+                    <span class="title">Mail</span>
+                    <img class="widget_img" onClick="expand(3)" src="assets/images/expand_w.png" />
+                </header>
+                <div class="sc" id="noticias4"></div>
+            </div>  
+    </div>
+    
+    <div id="listadoCursos" >
+        <article id="listado" class="vertical-list"></article>     
+    </div>
+
+    <div id="tablaHoras" >
+        <article id="horas"></article>
+    </div>
+
+    <footer role="contentinfo"><center>Gukere team@2012</center></footer>
+    
+    <script src="assets/librerias/jquery-1.4.4.min.js"></script>
+    <script src="assets/librerias/mustache.js"></script>
+    <script src="data/templates.js"></script>
+    <script src="data/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/*   MEDIA QUERYS     */
+
+
+/*--------------------------1220---------------------------*/
+
+@media only screen and (max-width : 3220px),
+only screen and (max-device-width : 3220px){
+
+
+
+	nav li a {
+		font: 400 10px/1.4 'Cutive', Helvetica, Verdana, Arial, sans-serif;
+	}
+ 
+	nav small {
+		font: 100 10px/1 Helvetica, Verdana, Arial, sans-serif;
+	}
+
+	header img {
+		width: 35%;
+	}
+
+	.widget {
+		margin: 45px 20px 0px 20px;
+		display: inline-block;
+	}
+
+	.agenda {
+		margin: 45px 20px 0px 20px;
+		display: inline-block;
+	}
+}
+
+/*--------------------------930-----------------------------*/
+
+@media only screen and (max-width : 930px),
+only screen and (max-device-width : 930px){
+	nav li a {
+		width: 25%;
+		border-bottom: 1px solid #fff;
+		font: 400 11px/1.4 'Cutive', Helvetica, Verdana, Arial, sans-serif;
+	}
+
+	header img {
+		width: 50%;
+	}
+ 
+	nav li:last-child a, nav li:nth-child(4) a {
+		border-right: none;
+	}
+ 
+	nav li:nth-child(5) a, nav li:nth-child(6) a, nav li:nth-child(7) a, nav li:nth-child(8) a {
+		border-bottom: none;
+	}
+
+	.widget {
+		margin: 35px 10px 0px 10px;
+		display: inline-block;
+	}
+
+	.agenda {
+		margin: 35px 10px 0px 10px;
+		display: inline-block;
+	}
+}
+
+/*--------------------------580-----------------------------*/
+
+@media only screen and (max-width : 580px),
+only screen and (max-device-width : 580px){
+	nav li a {
+		width: 50%;
+		font: 400 12px/1.4 'Cutive', Helvetica, Verdana, Arial, sans-serif;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+
+	header img {
+		width: 80%;
+	}
+ 
+	nav li:nth-child(even) a {
+		border-right: none;
+	}
+ 
+	nav li:nth-child(5) a, nav li:nth-child(6) a {
+		border-bottom: 1px solid #fff;
+	}
+
+	.widget {
+		margin: 25px 0px 0px 0px;
+		clear: both;
+	}
+
+  	.agenda{
+		clear:both;
+		margin: 25px 0px 0px 0px;
+	}
+
+	.noticia_noticia{
+  		font: 80% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	}
+
+	.fecha_noticia{
+  		font: 75% "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+  		margin: 3px 6px 0px 0px;
+	}
+}
+
+/*--------------------------320-----------------------------*/
+ 
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){
+	nav li a {
+		font: 400 11px/1.4 'Cutive', Helvetica, Verdana, Arial, sans-serif;
+	}
+}

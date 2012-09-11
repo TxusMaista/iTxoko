@@ -1,0 +1,162 @@
+dt {
+  font-weight: bold;
+  font-size: 8pt;
+}
+
+dd {
+  font-size: 8pt;
+}
+
+select {
+  font-size: 8pt;
+}
+
+.eti1 {
+  color: #000000;
+  font-family: "Comic Sans MS", cursive, serif;
+  font-size: small;
+  font-weight: bold;
+}
+
+.eti2 {
+  color: #FF0000;
+  font-family: "Comic Sans MS", cursive, serif;
+  font-size: small;
+  font-weight: normal;
+}
+
+.eti3 {
+  color: #FF0000;
+  font-family: "Comic Sans MS", cursive, serif;
+  font-size: small;
+  font-weight: bold;
+}
+
+.h3 {
+  color: #006478;
+  font-family: Tahoma, Sans-Serif;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.textomen {
+  color: #000000;
+  font-family: Arial, Sans-Serif;
+  font-size: x-small;
+  font-weight: normal;
+}
+
+.titulo1 {
+  color: #000000;
+  font-family: Arial,sans-serif;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+.titulo2 {
+  color: #009999;
+  font-family: "Times New Roman", serif;
+  font-size: small;
+  font-weight: bold;
+}
+
+.titulo3 {
+  color: #990000;
+  font-family: "Times New Roman", serif;
+  font-size: small;
+  font-weight: bold;
+}
+
+.horarioDia {
+  background-color: #FFFFFF;
+  font-family: Tahoma, serif;
+  font-weight: bold;
+  font-size: 8pt;
+}
+
+.horarioHora{
+  border-top: 1px solid Black;
+  background-color: #FFFFFF;
+  font-family: Tahoma, serif;
+  font-weight: bold;
+  font-size: 8pt;
+}
+
+.horarioExcep{
+  background-color: #FFDF00;
+  font-family: Tahoma, serif;
+  font-weight: bold;
+  font-size: 7pt;
+  border-top: 1px solid Black;
+}
+
+.horarioCelda{
+  border-top: 1px solid Silver;
+  background-color: #FFFFFF;
+  font-family: Tahoma, serif;
+  font-size: 7pt;
+}
+
+.horarioOcup{
+  border-top: 1px solid Black;
+  background-color: #FF524F;
+  background-color: white;
+  font-family: Tahoma, serif;
+  font-size: 7pt;
+/*  background-image: url('/images/prohibido.gif');
+  background-repeat: no-repeat;
+  background-position: center;*/
+}
+
+.horarioLibre{
+  border-top: 1px solid Black;
+/*  background-color: #53E553;*/
+  background-color: White;
+/*  color: #53E553;*/
+  color: white;
+  font-family: Tahoma, serif;
+  font-size: 7pt;
+}
+
+.horarioCab{
+  border-top: 1px solid Black;
+  font-family: Tahoma, serif;
+  font-size: 7pt;
+}
+
+.horarioRes{
+  border-top: 1px solid Silver;
+  background-color: #F5F5F5;
+  font-family: Tahoma, serif;
+  font-size: 7pt;
+  color: Red;
+}
+
+.horarioTitCab{
+  font-family: Tahoma, serif;
+  font-weight: bold;
+  font-size: 7pt;
+}
+
+.horarioTitDato{
+  color: Blue;
+  font-family: Tahoma, serif;
+  font-weight: bold;
+  font-size: 10pt;
+}
+
+.horarioLeyenCab{
+  font-family: Tahoma, serif;
+  font-weight: bold;
+  font-size: 7pt;
+  border-bottom: 1px solid Black;
+}
+
+.horarioLeyenDato{
+  font-family: Tahoma, serif;
+  font-size: 7pt;
+}
+
+.nota{
+  color: red;
+}
