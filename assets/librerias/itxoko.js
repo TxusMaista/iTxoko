@@ -46,7 +46,7 @@ function noticiaMax(w,n){
             var fecha = noticia[0].getElementsByClassName('fecha_resumen');
             var autor = noticia[0].getElementsByClassName('autor_resumen');
             texto[0].style.minHeight = "280px";
-            texto[0].style.padding = "15px";
+            texto[0].style.padding = "0% 2%";
             texto[0].style.fontSize = "90%";
             texto[0].style.overflow = "scroll";
 
@@ -59,7 +59,7 @@ function noticiaMax(w,n){
             var titulo = widget[w].getElementsByClassName('title');
             var titulo2 = noticia[0].getElementsByClassName('titulo_resumen');
             titulo[0].firstChild.nodeValue = titulo2[0].firstChild.nodeValue;
-            titulo2[0].style.display = "none";
+            titulo2[0].style.visibility = "hidden";
 }
 
 function noticiaMin(w,n){
@@ -92,7 +92,7 @@ function noticiaMin(w,n){
             
             lista[0].insertBefore(lista[0].firstChild, noticia[n+1]);
             lista[0].scrollTop = 0;
-            titulo2[0].style.display = "block";
+            titulo2[0].style.visibility = "visible";
 
             image_back[w].style.display= "none";
             image[w].src = "assets/images/nexpand_w.png";
