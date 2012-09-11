@@ -45,12 +45,13 @@
 </head>
 
 <body class="app" manifest="/cache.manifest">
+
     <header>
         <span><img src="assets/images/header2.png"/></span>
     </header>
-            
+
     <nav class="btn-group">
-        <a OnClick="nav(1)" class="button">Noticias</a> 
+        <a OnClick="nav(1)" class="button">Noticias</a>
         <a OnClick="nav(2)" class="button">Agenda</a>
     </nav>
 
@@ -140,7 +141,16 @@
                     <span class="title">Facebook</span>
                     <img class="widget_img" onClick="expand(2)" src="assets/images/expand_w.png" />
                 </header>
-                <div class="sc" id="noticias3"></div>
+                    <div id="fb-root"></div>
+                    <script>(function(d, s, id) {
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) return;
+                      js = d.createElement(s); js.id = id;
+                      js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=201463906543068";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+
+                    <div class="fb-activity" data-href="http://www.zaleak.com" data-app-id="201463906543068" data-width="300" data-height="300" data-header="true" data-recommendations="true"></div>
             </div>
             <div class="widget">
                 <header>
@@ -148,11 +158,11 @@
                     <img class="widget_img" onClick="expand(3)" src="assets/images/expand_w.png" />
                 </header>
                 <div class="sc" id="noticias4"></div>
-            </div>  
+            </div>
     </div>
-    
+
     <div id="listadoCursos" >
-        <article id="listado" class="vertical-list"></article>     
+        <article id="listado" class="vertical-list"></article>
     </div>
 
     <div id="tablaHoras" >
@@ -160,7 +170,7 @@
     </div>
 
     <footer role="contentinfo"><center>Gukere team@2012</center></footer>
-    
+
     <script src="assets/librerias/jquery-1.4.4.min.js"></script>
     <script src="assets/librerias/mustache.js"></script>
     <script src="data/templates.js"></script>
