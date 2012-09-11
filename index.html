@@ -27,21 +27,7 @@
     <!--<link rel="stylesheet" href="kanalizador.css">-->
      <!-- responsibue -->
     <link href="assets/stylesheets/mediaStyle.css" rel="stylesheet" type="text/css">
-
-    <script language="javascript">
-
-        document.addEventListener('touchstart', function(event) {
-        // Prevent text selection
-        //event.preventDefault();
-        }, false);
-
-        document.addEventListener('mousedown', function(event) {
-        // Prevent text selection
-        event.preventDefault();
-        }, false);
-
-    </script>
-
+    <script src="assets/librerias/itxoko.js"></script>
 </head>
 
 <body class="app" manifest="/cache.manifest">
@@ -55,75 +41,10 @@
         <a OnClick="nav(2)" class="button">Agenda</a>
     </nav>
 
-    <script type="text/javascript">
-        function expand(a){
-            elemtens = document.getElementsByClassName('widget');
-            elemtens2 = document.getElementsByClassName('widget_img');
-            if(elemtens[a].style.maxWidth == "320px"){
-                elemtens[a].style.maxWidth = "750px";
-                elemtens2[a].src = "assets/images/nexpand_w.png";
-            }
-            else{
-                elemtens[a].style.maxWidth = "320px";
-                elemtens2[a].src = "assets/images/expand_w.png";
-            }
-        }
-
-        function noticiaMax(w,n){
-            var temp;
-            widget = document.getElementsByClassName('widget');
-            noticia = widget[w].getElementsByClassName('lista');
-            lista = widget[w].getElementsByClassName("sc");
-
-            lista[0].insertBefore(noticia[n], lista[0].firstChild);
-            widget[w].style.maxWidth = "750px";
-
-            noticia[0].style.minHeight = "342px";
-            lista[0].scrollTop = 0;
-            lista[0].style.overflow = "hidden";
-
-            var titulo = widget[w].getElementsByClassName('title');
-            var titulo2 = noticia[0].getElementsByClassName('titulo_resumen');
-            titulo[0].firstChild.nodeValue = titulo2[0].firstChild.nodeValue;
-        }
-
-        function nav(n){
-            switch(n)
-            {
-                case 1:
-                widget = document.getElementById('listadoCursos');
-                widget.style.display = "none";
-                widget = document.getElementById('tablaHoras');
-                widget.style.display = "none";
-                widget = document.getElementById('noticias');
-                widget.style.display = "inline";
-                break;
-                case 2:
-                widget = document.getElementById('noticias');
-                widget.style.display = "none";
-                widget = document.getElementById('tablaHoras');
-                widget.style.display = "none";
-                widget = document.getElementById('listadoCursos');
-                widget.style.display = "inline";
-                break;
-                case 3:
-                widget = document.getElementById('noticias');
-                widget.style.display = "none";
-                widget = document.getElementById('listadoCursos');
-                widget.style.display = "none";
-                widget = document.getElementById('tablaHoras');
-                widget.style.display = "inline";
-                break;
-                default:
-                break;
-            }
-        }
-
-    </script>
-
     <div id="noticias">
             <div class="widget">
                 <header>
+                    <img class="widget_img_back" src="assets/images/back.png" />
                     <span class="title">Twitter</span>
                     <img class="widget_img" onClick="expand(0)" src="assets/images/expand_w.png" />
                 </header>
@@ -131,6 +52,7 @@
             </div>
             <div class="widget">
                 <header>
+                    <img class="widget_img_back" src="assets/images/back.png" />
                     <span class="title">RSS</span>
                     <img class="widget_img" onClick="expand(1)" src="assets/images/expand_w.png" />
                 </header>
@@ -138,6 +60,7 @@
             </div>
             <div class="widget">
                 <header>
+                    <img class="widget_img_back" src="assets/images/back.png" />
                     <span class="title">Facebook</span>
                     <img class="widget_img" onClick="expand(2)" src="assets/images/expand_w.png" />
                 </header>
@@ -154,6 +77,7 @@
             </div>
             <div class="widget">
                 <header>
+                    <img class="widget_img_back" src="assets/images/back.png" />
                     <span class="title">Mail</span>
                     <img class="widget_img" onClick="expand(3)" src="assets/images/expand_w.png" />
                 </header>
