@@ -165,6 +165,7 @@
 
 .sc {
   overflow: scroll;
+  min-height: 342px;
   height: 342px;
   -webkit-overflow-scrolling: touch;
 }
