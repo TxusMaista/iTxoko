@@ -60,7 +60,7 @@ Services = (function() {
         var sec2 = -1;
         var sec3 = -1;
         var sec4 = -1;
-        var url = 'http://10.92.12.122:8000/api/rsc/item/?callback=?';
+        var url = 'http://10.92.12.122:8000/api/rsc/item/?limit=0&callback=?';
         var data = {
             limit: "0",
             callback: '?'
@@ -68,7 +68,6 @@ Services = (function() {
 
         $.getJSON(url, function(response) {
             var object;
-            console.log(response);
             for(var i=0;i<response.objects.length;i++){
                 if (response.objects[i].category == "twitter"){
                 object = parseadorTweet(response.objects[i]);

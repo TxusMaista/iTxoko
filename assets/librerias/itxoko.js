@@ -1,9 +1,141 @@
-document.addEventListener("touchstart",function(){},!1);document.addEventListener("mousedown",function(a){a.preventDefault()},!1);function expand(a){elemtens=document.getElementsByClassName("widget");elemtens2=document.getElementsByClassName("widget_img");"320px"==elemtens[a].style.maxWidth?(elemtens[a].style.maxWidth="750px",elemtens2[a].src="assets/images/nexpand_w.png"):(elemtens[a].style.maxWidth="320px",elemtens2[a].src="assets/images/expand_w.png")}
-function noticiaMax(a,e){widget=document.getElementsByClassName("widget");image=document.getElementsByClassName("widget_img");image_back=document.getElementsByClassName("widget_img_back");noticia=widget[a].getElementsByClassName("lista");lista=widget[a].getElementsByClassName("sc");lista[0].insertBefore(noticia[e],lista[0].firstChild);widget[a].style.maxWidth="750px";image[a].style.display="none";image_back[a].setAttribute("onClick","noticiaMin("+a+","+e+")");image_back[a].style.display="inline";
-noticia[0].style.minHeight="342px";lista[0].scrollTop=0;lista[0].style.overflow="hidden";var c=noticia[0].getElementsByClassName("noticia_resumen"),b=noticia[0].getElementsByClassName("imagen_resumen"),d=noticia[0].getElementsByClassName("fecha_resumen"),f=noticia[0].getElementsByClassName("autor_resumen");c[0].style.minHeight="280px";c[0].style.padding="15px";c[0].style.fontSize="90%";c[0].style.overflow="scroll";b[0].style.width="80px";b[0].style.marginLeft="10px";d[0].style.fontSize="80%";f[0].style.fontSize=
-"80%";c=widget[a].getElementsByClassName("title");b=noticia[0].getElementsByClassName("titulo_resumen");c[0].firstChild.nodeValue=b[0].firstChild.nodeValue;b[0].style.display="none"}
-function noticiaMin(a,e){widget=document.getElementsByClassName("widget");image=document.getElementsByClassName("widget_img");image_back=document.getElementsByClassName("widget_img_back");noticia=widget[a].getElementsByClassName("lista");lista=widget[a].getElementsByClassName("sc");var c=noticia[0].getElementsByClassName("titulo_resumen"),b=widget[a].getElementsByClassName("title");lista[0].style.overflow="scroll";noticia[0].style.minHeight="75px";var d=noticia[0].getElementsByClassName("noticia_resumen"),
-f=noticia[0].getElementsByClassName("imagen_resumen"),g=noticia[0].getElementsByClassName("fecha_resumen"),h=noticia[0].getElementsByClassName("autor_resumen");d[0].style.minHeight="36px";d[0].style.padding="0px";d[0].style.fontSize="65%";d[0].style.overflow="hidden";f[0].style.width="60px";f[0].style.marginLeft="0px";g[0].style.fontSize="70%";h[0].style.fontSize="70%";lista[0].insertBefore(lista[0].firstChild,noticia[e+1]);lista[0].scrollTop=0;c[0].style.display="block";image_back[a].style.display=
-"none";image[a].src="assets/images/nexpand_w.png";image[a].style.display="inline";switch(a){case 0:b[a].firstChild.nodeValue="Twitter";break;case 1:b[a].firstChild.nodeValue="RSS";break;case 2:b[a].firstChild.nodeValue="Facebook";break;case 3:b[a].firstChild.nodeValue="Mail"}}
-function nav(a){switch(a){case 1:widget=document.getElementById("listadoCursos");widget.style.display="none";widget=document.getElementById("tablaHoras");widget.style.display="none";widget=document.getElementById("noticias");widget.style.display="inline";break;case 2:widget=document.getElementById("noticias");widget.style.display="none";widget=document.getElementById("tablaHoras");widget.style.display="none";widget=document.getElementById("listadoCursos");widget.style.display="inline";break;case 3:widget=
-document.getElementById("noticias"),widget.style.display="none",widget=document.getElementById("listadoCursos"),widget.style.display="none",widget=document.getElementById("tablaHoras"),widget.style.display="inline"}};
+document.addEventListener('touchstart', function(event) {
+        // Prevent text selection
+        //event.preventDefault();
+        }, false);
+
+        document.addEventListener('mousedown', function(event) {
+        // Prevent text selection
+        event.preventDefault();
+        }, false);
+
+function expand(a){
+            elemtens = document.getElementsByClassName('widget');
+            elemtens2 = document.getElementsByClassName('widget_img');
+            if(elemtens[a].style.maxWidth == "320px"){
+                elemtens[a].style.maxWidth = "750px";
+                elemtens2[a].src = "assets/images/nexpand_w.png";
+            }
+            else{
+                elemtens[a].style.maxWidth = "320px";
+                elemtens2[a].src = "assets/images/expand_w.png";
+            }
+    
+}
+
+function noticiaMax(w,n){
+            var temp;
+            widget = document.getElementsByClassName('widget');
+            image = document.getElementsByClassName('widget_img');
+            image_back = document.getElementsByClassName('widget_img_back');
+            noticia = widget[w].getElementsByClassName('lista');
+            lista = widget[w].getElementsByClassName("sc");
+
+            lista[0].insertBefore(noticia[n], lista[0].firstChild);
+            
+            widget[w].style.maxWidth = "750px";
+            image[w].style.display = "none";
+            image_back[w].setAttribute("onClick", "noticiaMin("+w+","+n+")");
+            image_back[w].style.display = "inline";
+
+            noticia[0].style.minHeight = "342px";
+            lista[0].scrollTop = 0;
+            lista[0].style.overflow = "hidden";
+
+            var texto = noticia[0].getElementsByClassName('noticia_resumen');
+            var foto = noticia[0].getElementsByClassName('imagen_resumen');
+            var fecha = noticia[0].getElementsByClassName('fecha_resumen');
+            var autor = noticia[0].getElementsByClassName('autor_resumen');
+            texto[0].style.minHeight = "280px";
+            texto[0].style.padding = "15px";
+            texto[0].style.fontSize = "90%";
+            texto[0].style.overflow = "scroll";
+
+            foto[0].style.width = "80px";
+            foto[0].style.marginLeft = "10px";
+
+            fecha[0].style.fontSize = "80%";
+            autor[0].style.fontSize = "80%";
+
+            var titulo = widget[w].getElementsByClassName('title');
+            var titulo2 = noticia[0].getElementsByClassName('titulo_resumen');
+            titulo[0].firstChild.nodeValue = titulo2[0].firstChild.nodeValue;
+            titulo2[0].style.display = "none";
+}
+
+function noticiaMin(w,n){
+            var temp;
+            widget = document.getElementsByClassName('widget');
+            image = document.getElementsByClassName('widget_img');
+            image_back = document.getElementsByClassName('widget_img_back');
+            noticia = widget[w].getElementsByClassName('lista');
+            lista = widget[w].getElementsByClassName("sc");
+            var titulo2 = noticia[0].getElementsByClassName('titulo_resumen');
+            var titulo = widget[w].getElementsByClassName('title');
+
+            lista[0].style.overflow = "scroll";
+            noticia[0].style.minHeight = "75px";
+
+            var texto = noticia[0].getElementsByClassName('noticia_resumen');
+            var foto = noticia[0].getElementsByClassName('imagen_resumen');
+            var fecha = noticia[0].getElementsByClassName('fecha_resumen');
+            var autor = noticia[0].getElementsByClassName('autor_resumen');
+            texto[0].style.minHeight = "36px";
+            texto[0].style.padding = "0px";
+            texto[0].style.fontSize = "65%";
+            texto[0].style.overflow = "hidden";
+
+            foto[0].style.width = "60px";
+            foto[0].style.marginLeft = "0px";
+
+            fecha[0].style.fontSize = "70%";
+            autor[0].style.fontSize = "70%";
+            
+            lista[0].insertBefore(lista[0].firstChild, noticia[n+1]);
+            alert("lol")
+            lista[0].scrollTop = 0;
+            titulo2[0].style.display = "block";
+
+            image_back[w].style.display= "none";
+            image[w].src = "assets/images/nexpand_w.png";
+            image[w].style.display = "inline"
+
+            switch(w){
+                case 0:titulo[0].firstChild.nodeValue = "Twitter";break;
+                case 1:titulo[0].firstChild.nodeValue = "RSS";break;
+                case 2:titulo[0].firstChild.nodeValue = "Facebook";break;
+                case 3:titulo[0].firstChild.nodeValue = "Mail";break;
+                default:break;
+            }
+}
+
+function nav(n){
+            switch(n)
+            {
+                case 1:
+                widget = document.getElementById('listadoCursos');
+                widget.style.display = "none";
+                widget = document.getElementById('tablaHoras');
+                widget.style.display = "none";
+                widget = document.getElementById('noticias');
+                widget.style.display = "inline";
+                break;
+                case 2:
+                widget = document.getElementById('noticias');
+                widget.style.display = "none";
+                widget = document.getElementById('tablaHoras');
+                widget.style.display = "none";
+                widget = document.getElementById('listadoCursos');
+                widget.style.display = "inline";
+                break;
+                case 3:
+                widget = document.getElementById('noticias');
+                widget.style.display = "none";
+                widget = document.getElementById('listadoCursos');
+                widget.style.display = "none";
+                widget = document.getElementById('tablaHoras');
+                widget.style.display = "inline";
+                break;
+                default:
+                break;
+            }
+}
