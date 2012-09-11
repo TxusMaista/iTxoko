@@ -154,6 +154,7 @@
   border-radius:10px;
   text-align:center;
   width:90%;
+  vertical-align: top;
   background-color: white;
   box-shadow:5px 5px 5px #222;
   -webkit-transition: all 2s ease;
