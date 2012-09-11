@@ -16,7 +16,7 @@
 
 .title{
   font-weight:bold;
-  height:19px;
+  max-height:19px;
   overflow: hidden;
 }
 
@@ -88,6 +88,8 @@
   color: white;
   background-color: #005c5e;
   border-radius:10px;
+  max-height:21px;
+  overflow: hidden;
   margin: 0px 0px 7px 0px;
 }
 
@@ -95,6 +97,13 @@
   float: right;
   width:19px;
   margin: 1px 6px 0px 0px;
+}
+
+.widget_img_back{
+  float: left;
+  width:21px;
+  margin: 2px 0px 0px 6px;
+  display:none;
 }
 
 .widget_img:hover{
