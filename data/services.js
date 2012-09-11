@@ -1,7 +1,7 @@
 Services = (function() {
 
 	var kanalItems = function(){
-		$.getJSON('http://10.92.12.119:8000/api/rsc/scourse?callback=?', function(response) {
+		$.getJSON('http://10.92.12.122:8000/api/rsc/scourse?callback=?', function(response) {
 				var html = Mustache.to_html(Template.cursoos(), response);
                 $('#listado').html(html);
 			}
@@ -9,7 +9,7 @@ Services = (function() {
 	};
 
      var cursoHorario = function(cc){
-        $.getJSON('http://10.92.12.119:8000/api/rsc/course?code='+cc.id+'&callback=?', function(response) {
+        $.getJSON('http://10.92.12.122:8000/api/rsc/course?code='+cc.id+'&callback=?', function(response) {
                 parseCurso(response.objects);
             }
         );
@@ -60,13 +60,13 @@ Services = (function() {
         var sec2 = -1;
         var sec3 = -1;
         var sec4 = -1;
-        var url = 'http://10.92.12.119:8000/api/rsc/item/?callback=?';
+        var url = 'http://10.92.12.122:8000/api/rsc/item/?callback=?';
         var data = {
             limit: "0",
             callback: '?'
         };
 
-        /*$.getJSON(url, function(response) {
+        $.getJSON(url, function(response) {
             var object;
             console.log(response);
             for(var i=0;i<response.objects.length;i++){
@@ -118,66 +118,9 @@ Services = (function() {
                     date: object.date,
                     title: object.title
                 });}
-            }*/
+            }
 
-        var lore = "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains"
-
-        var joo = {
-            noticia:[
-                    {
-                        id:0,
-                        widget:0,
-                        author: "Pere Premia",
-                        desc: lore,
-                        img: "assets/images/noticias.jpg",
-                        date: "18/07/2012",
-                        title: "Noticia muy importane1"
-                    },
-
-                    {
-                        id:1,
-                        widget:0,
-                        author: "Pere Premia",
-                        desc: lore,
-                        img: "assets/images/noticias.jpg",
-                        date: "18/07/2012",
-                        title: "Noticia muy importane2"
-                    },
-
-                    {
-                        id:2,
-                        widget:0,
-                        author: "Pere Premia",
-                        desc: lore,
-                        img: "assets/images/noticias.jpg",
-                        date: "18/07/2012",
-                        title: "Noticia muy importane3rrrrrrrrrrrrrrririririiriririririririririririririririririiriririrrirr"
-                    },
-
-                    {
-                        id:3,
-                        widget:0,
-                        author: "Pere Premia",
-                        desc: lore,
-                        img: "assets/images/noticias.jpg",
-                        date: "18/07/2012",
-                        title: "Noticia muy importane4"
-                    },
-
-                    {
-                        id:4,
-                        widget:0,
-                        author: "Pere Premia",
-                        desc: lore,
-                        img: "assets/images/noticias.jpg",
-                        date: "18/07/2012",
-                        title: "Noticia muy importane4"
-                    }
-
-            ]
-        }
-
-        var html = Mustache.to_html(Template.news(), joo);
+        var html = Mustache.to_html(Template.news(), section1);
         $('#noticias1').html(html);
         var html = Mustache.to_html(Template.news(), section2);
         $('#noticias2').html(html);
@@ -186,7 +129,7 @@ Services = (function() {
         var html = Mustache.to_html(Template.news(), section4);
         $('#noticias4').html(html);
 
-        //});
+        });
     };
 
     function parseadorTweet (json){
