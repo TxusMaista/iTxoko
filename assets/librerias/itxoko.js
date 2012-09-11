@@ -91,7 +91,6 @@ function noticiaMin(w,n){
             autor[0].style.fontSize = "70%";
             
             lista[0].insertBefore(lista[0].firstChild, noticia[n+1]);
-            alert("lol")
             lista[0].scrollTop = 0;
             titulo2[0].style.display = "block";
 
