@@ -30,6 +30,7 @@ function noticiaMax(w,n){
             noticia = widget[w].getElementsByClassName('lista');
             lista = widget[w].getElementsByClassName("sc");
 
+            noticia[n].removeAttribute("onClick");
             lista[0].insertBefore(noticia[n], lista[0].firstChild);
             
             widget[w].style.maxWidth = "750px";
@@ -46,12 +47,12 @@ function noticiaMax(w,n){
             var fecha = noticia[0].getElementsByClassName('fecha_resumen');
             var autor = noticia[0].getElementsByClassName('autor_resumen');
             texto[0].style.minHeight = "280px";
-            texto[0].style.padding = "0% 2%";
+            texto[0].style.padding = "1% 2%";
             texto[0].style.fontSize = "90%";
             texto[0].style.overflow = "scroll";
 
-            foto[0].style.width = "80px";
-            foto[0].style.marginLeft = "10px";
+            foto[0].style.width = "20%";
+            foto[0].style.marginLeft = "1%";
 
             fecha[0].style.fontSize = "80%";
             autor[0].style.fontSize = "80%";
@@ -74,6 +75,7 @@ function noticiaMin(w,n){
 
             lista[0].style.overflow = "scroll";
             noticia[0].style.minHeight = "75px";
+            noticia[0].setAttribute("onClick", "noticiaMax("+w+","+n+")");
 
             var texto = noticia[0].getElementsByClassName('noticia_resumen');
             var foto = noticia[0].getElementsByClassName('imagen_resumen');
